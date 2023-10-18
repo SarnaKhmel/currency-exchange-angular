@@ -6,11 +6,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ExchangerComponent } from './exchanger/exchanger.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-      HeaderComponent
+      HeaderComponent,
+      ExchangerComponent
    ],
   imports: [
     BrowserModule,
