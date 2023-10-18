@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,12 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent  {
   @Input("usdRateNBU") usd! : string | undefined; 
   @Input("eurRateNBU") eur! : string | undefined; 
+
+  selectedLanguage: string = 'en';
+  
+  constructor(private translate: TranslateService) {}
+  
+  changeLanguage() {
+    this.translate.use(this.selectedLanguage);
+  }
 }
