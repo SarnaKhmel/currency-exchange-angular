@@ -3,8 +3,11 @@
     <div>
       <p>{{ "NBU" | translate }}</p>
       <input
+        class="amountTo"
         [(ngModel)]="amountFrom"
         (ngModelChange)="convertCurrency()"
+        type="number"
+        step="0.01"
         placeholder="Amount" />
       <select
         [(ngModel)]="selectedCurrencyFrom"
@@ -21,6 +24,7 @@
     </div>
     <div>
       <input
+        class="amountTo"
         [(ngModel)]="amountTo"
         (ngModelChange)="convertCurrency(true)"
         type="number"
