@@ -1,3 +1,46 @@
-<p>
-  exchanger works!
-</p>
+<div class="converter">
+  <div class="converter-form">
+    <div>
+      <p>{{ "NBU" | translate }}</p>
+      <input
+        [(ngModel)]="amountFrom"
+        (ngModelChange)="convertCurrency()"
+        (input)="roundInputToTwoDecimals($event)"
+        type="number"
+        step="0.01"
+        placeholder="Amount" />
+      <select
+        [(ngModel)]="selectedCurrencyFrom"
+        (ngModelChange)="convertCurrency()">
+        <option selected value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option
+          *ngFor="let currency of currencies | keyvalue"
+          [value]="currency.key">
+          {{ currency.value }} ({{ currency.key }})
+        </option>
+      </select>
+    </div>
+    <div>
+      <input
+        [(ngModel)]="amountTo"
+        (ngModelChange)="convertCurrency(true)"
+        type="number"
+        step="0.01"
+        placeholder="Amount" />
+      <select
+        [(ngModel)]="selectedCurrencyTo"
+        (ngModelChange)="convertCurrency(true)">
+        <option value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option
+          *ngFor="let currency of currencies | keyvalue"
+          [value]="currency.key">
+          {{ currency.value }} ({{ currency.key }})
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,2 @@
 <app-header [usdRateNBU]="usdRateNBU" [eurRateNBU]="eurRateNBU"></app-header>
-<app-exchanger [allData]="allData"></app-exchanger>
+<app-exchanger *ngIf="allData" [allData]="allData"></app-exchanger>
