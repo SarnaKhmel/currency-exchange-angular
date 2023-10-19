@@ -4,5 +4,6 @@
   "Sale": "Sale",
   "NBU": "NBU",
   "Rate": "Rate",
-  "value": "Value"
+  "value": "Value",
+  "Currency converter relative to the NBU exchange rate": "Currency converter relative to the NBU exchange rate"
 }

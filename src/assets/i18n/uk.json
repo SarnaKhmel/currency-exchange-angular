@@ -4,5 +4,6 @@
   "Sale": "Продаж",
   "NBU": "НБУ",
   "Rate": "Курс",
-  "value": "Значення"
+  "value": "Значення",
+  "Currency converter relative to the NBU exchange rate": "Конвертор валют відносно курсу НБУ"
 }
