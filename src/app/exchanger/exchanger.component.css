@@ -5,17 +5,39 @@
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.converter-form > p {
+  text-align: center;
 }
 
 .converter-form {
+  margin-top: 50px;
   background-color: rgba(255, 255, 255, 0.1);
   width: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   border-radius: 10px;
   padding: 20px;
+}
+
+.converter-block {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .converter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .converter-block {
+    width: 80%;
+  }
 }
 
 .amountTo {

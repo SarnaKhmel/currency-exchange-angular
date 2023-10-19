@@ -1,14 +1,21 @@
 <div class="converter">
   <div class="converter-form">
-    <div>
-      <p>{{ "NBU" | translate }}</p>
+    <p>
+      {{ "Currency converter relative to the NBU exchange rate" | translate }}
+    </p>
+  </div>
+  <div class="converter-form">
+    <div class="converter-block">
+      <label for="input"> {{ "value" | translate }} 1</label>
       <input
         class="amountTo"
         [(ngModel)]="amountFrom"
         (ngModelChange)="convertCurrency()"
         type="number"
         step="0.01"
-        placeholder="Amount" />
+        placeholder="Amount"
+        (focus)="onInputFocus($event)" />
+
       <select
         [(ngModel)]="selectedCurrencyFrom"
         (ngModelChange)="convertCurrency()">
@@ -22,14 +29,18 @@
         </option>
       </select>
     </div>
-    <div>
+    <div class="converter-block">
+      <label for="input"> {{ "value" | translate }} 2</label>
+
       <input
         class="amountTo"
         [(ngModel)]="amountTo"
         (ngModelChange)="convertCurrency(true)"
         type="number"
         step="0.01"
-        placeholder="Amount" />
+        placeholder="Amount"
+        (focus)="onInputFocus($event)" />
+
       <select
         [(ngModel)]="selectedCurrencyTo"
         (ngModelChange)="convertCurrency(true)">

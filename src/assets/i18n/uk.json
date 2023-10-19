@@ -4,6 +4,6 @@
   "Sale": "Продаж",
   "NBU": "НБУ",
   "Rate": "Курс",
-  "hello": "Привіт",
-  "greeting": "Ласкаво просимо до нашого додатку"
+  "value": "Значення",
+  "Currency converter relative to the NBU exchange rate": "Конвертор валют відносно курсу НБУ"
 }
