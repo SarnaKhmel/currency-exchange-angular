@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-// import { ExchangerComponent } from './exchanger/exchanger.component';
+ import { ExchangerComponent } from './exchanger/exchanger.component';
 
 import { LanguageService } from './language.service';
 
@@ -22,7 +22,7 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [		
     AppComponent,
       HeaderComponent,
-      // ExchangerComponent
+       ExchangerComponent
    ],
   imports: [
     BrowserModule,

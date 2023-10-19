@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CurrencyService } from '../currency.service';
-import { LanguageService } from '../language.service'; 
+import { LanguageService } from '../language.service';
 import { CurrencyRate } from '../models/currency-rate';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private currencyService: CurrencyService,
-    private languageService: LanguageService 
+    private languageService: LanguageService
   ) {}
 
   ngOnInit() {
